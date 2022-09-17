@@ -31,9 +31,11 @@ class Jugador {
      }
 
      shoot(){
-        var bullet_Img = loadImage("assets/flying-bullet-png-5 (1).png");
         this.shooter_shooting = loadImage("assets/shooter_3.png");
         this.player.addImage(this.shooter_shooting );
+         
+        var bullet_Img = loadImage("assets/flying-bullet-png-5 (1).png");
+        this bullet = createSprite();
        
      }
      noShoot(){
