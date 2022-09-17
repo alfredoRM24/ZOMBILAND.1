@@ -11,6 +11,7 @@ class Jugador {
          this.player.scale = 0.3
          this.player.debug = true
          this.player.setCollider("rectangle",0,0,300,300);
+      
          
          
      }
@@ -30,10 +31,13 @@ class Jugador {
      }
 
      shoot(){
-        this.bullet_Img= loadImage("assets/flying-bullet-png-5 (1).png");
-        this.shooter_shooting = loadImage("assets/shooter_3.png")
-        this.player.addImage("assets/shooter_3.png");
-        
+        var bullet_Img = loadImage("assets/flying-bullet-png-5 (1).png");
+        this.shooter_shooting = loadImage("assets/shooter_3.png");
+        this.player.addImage(this.shooter_shooting );
+       
+     }
+     noShoot(){
+        this.player.addImage(this.shooterImg);
      }
 
 }

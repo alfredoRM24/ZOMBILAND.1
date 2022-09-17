@@ -37,8 +37,6 @@ function draw() {
   background(0); 
 player.handelControl();
 
-
-
   //moving the player up and down and making the game mobile compatible using touches
 
 
@@ -46,13 +44,13 @@ player.handelControl();
 //release bullets and change the image of shooter to shooting position when space is pressed
 if(keyWentDown("space")){
  
-  player.addImage(shooter_shooting)
+ player.shoot()
  
 }
 
 //player goes back to original standing image once we stop pressing the space bar
 else if(keyWentUp("space")){
-  player.addImage(shooterImg)
+player.noShoot()
 }
 
 drawSprites();
