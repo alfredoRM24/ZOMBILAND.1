@@ -32,8 +32,8 @@ class Jugador {
      shoot(){
         this.bullet_Img= loadImage("assets/flying-bullet-png-5 (1).png");
         this.shooter_shooting = loadImage("assets/shooter_3.png")
-        this.player.addanimation = changeanimation("assets/shooter_3.png")
-        this.player.changeanimation 
+        this.player.addImage("assets/shooter_3.png");
+        
      }
 
 }
