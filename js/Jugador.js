@@ -35,7 +35,7 @@ class Jugador {
         this.player.addImage(this.shooter_shooting );
          
         var bullet_Img = loadImage("assets/flying-bullet-png-5 (1).png");
-        this bullet = createSprite();
+        this.bullet = createSprite();
        
      }
      noShoot(){
