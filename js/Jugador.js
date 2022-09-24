@@ -7,12 +7,11 @@ class Jugador {
         
          this.shooterImg = loadImage("assets/shooter_2.png");
          this.player = createSprite(x,y, 50, 50);
-         this.player.addImage(this.shooterImg)
+         this.player.addImage(this.shooterImg);
          this.player.scale = 0.3
          this.player.debug = true
          this.player.setCollider("rectangle",0,0,300,300);
-      
-         
+
          
      }
      handelControl(){
@@ -33,13 +32,18 @@ class Jugador {
      shoot(){
         this.shooter_shooting = loadImage("assets/shooter_3.png");
         this.player.addImage(this.shooter_shooting );
-         
-        var bullet_Img = loadImage("assets/flying-bullet-png-5 (1).png");
-        this.bullet = createSprite();
        
+        var bullet_Img = loadImage("assets/flying-bullet-png-5 (1).png");
+        this.bullet = createSprite(this.player.x + 40,this.player.y-25,10,10);
+        this.bullet.velocityX = 2;
+        this.bullet.addImage(bullet_Img);
+        this.bullet.scale= 0.02
      }
      noShoot(){
         this.player.addImage(this.shooterImg);
+     }
+     zombAlt(){
+      this.zombies = random()
      }
 
 }

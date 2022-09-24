@@ -1,6 +1,7 @@
 var bg,bgImg;
 var player, shooterImg, shooter_shooting;
 var bullet;
+var game;
 
 
 function preload(){
@@ -14,7 +15,7 @@ function preload(){
 
 function setup() {
 
-  
+  game = new Game();
   createCanvas(windowWidth,windowHeight);
 
   //adding the background image
@@ -29,30 +30,12 @@ bg.scale = 1.1
    player.scale = 0.3
    player.debug = true
    player.setCollider("rectangle",0,0,300,300)*/
-player = new Jugador(displayWidth-1150, displayHeight-300)
+
 
 }
 
 function draw() {
   background(0); 
-player.handelControl();
-
-  //moving the player up and down and making the game mobile compatible using touches
-
-
-
-//release bullets and change the image of shooter to shooting position when space is pressed
-if(keyWentDown("space")){
- 
- player.shoot()
- 
-}
-
-//player goes back to original standing image once we stop pressing the space bar
-else if(keyWentUp("space")){
-player.noShoot()
-}
-
-drawSprites();
-
+  game.play();
+  drawSprites();
 }
